@@ -11,7 +11,6 @@ where duracion_permiso=new.duracion_permiso;
 if (t_permiso>= 15) then
 raise EXCEPTION 'ESTE EMPLEADO NO PUEDE SER JEFE HA EXEDIDO EL MAXIMO DE PERMISOS';
 else
-raise notice 'SI PUEDE SER JEFE';
 return new;
 end if;
 end;
