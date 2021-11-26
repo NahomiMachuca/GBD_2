@@ -9,7 +9,7 @@ begin
 select max(duracion_permiso)into t_permiso from permiso
 where duracion_permiso=new.duracion_permiso;
 if (t_permiso>= 15) then
-raise EXCEPTION 'ESTE EMPLEADO NO PUEDE SER JEFE HA EXEDIDO EL MAXIMO DE PERMISOS';
+raise EXCEPTION 'ESTE EMPLEADO NO PUEDE SER JEFE HA EXCEDIDO EL MAXIMO DE PERMISOS';
 else
 return new;
 end if;
